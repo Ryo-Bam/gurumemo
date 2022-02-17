@@ -63,9 +63,6 @@ const SinglePageAndApi = (props) => {
         }));
         setLat(results[0].geometry.location.lat());
         setLng(results[0].geometry.location.lng());
-        console.log(results);
-        console.log(results[0]);
-        console.log(results.name);
         // const placesService = new google.maps.places.PlacesService(map);
         // placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
         //   if (status === "OK") {
