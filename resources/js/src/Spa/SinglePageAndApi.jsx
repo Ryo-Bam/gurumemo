@@ -148,7 +148,6 @@ const SinglePageAndApi = (props) => {
       </div>
       <div style={{ height: '700px', width: '500px' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyDhsROMtI_itu_Sz4xFJIGo7GDyef0lVek" }}
           defaultCenter={defaultLatLng}
           defaultZoom={16}
           onGoogleApiLoaded={handleApiLoaded}
