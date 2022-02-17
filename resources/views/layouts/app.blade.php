@@ -8,8 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31b-oK-BfbhXDcnqUlTLF1RmYF8ClBQY=places"　
-        async></script>
+
 </head>
 <body>
     <div id="app" >
