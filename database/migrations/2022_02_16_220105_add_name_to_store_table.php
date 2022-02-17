@@ -14,7 +14,7 @@ class AddNameToStoreTable extends Migration
     public function up()
     {
         Schema::table('store', function (Blueprint $table) {
-            $table->string('name');
+            //
         });
     }
 
