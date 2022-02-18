@@ -63,15 +63,11 @@ const SinglePageAndApi = (props) => {
         }));
         setLat(results[0].geometry.location.lat());
         setLng(results[0].geometry.location.lng());
-
-        console.log(results[0].geometry.location.lat);
-        console.log(results[0]);
         const placesService = new google.maps.places.PlacesService(map);
         placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
           if (status === "OK") {
             //placeから情報を取得する処理
             setName(place.name);
-            console.log(place);
           }
         })
       }
@@ -154,7 +150,7 @@ const SinglePageAndApi = (props) => {
       </div>
       <div style={{ height: '700px', width: '500px' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyB31b-oK-BfbhXDcnqUlTLF1RmYF8ClBQY" }}
+          bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
           defaultCenter={defaultLatLng}
           defaultZoom={18}
           onGoogleApiLoaded={handleApiLoaded}
