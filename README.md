@@ -6,37 +6,49 @@
 
 ### 利用方法
 
-最初にマップ検索で自分の書きたい、見たいお店を検索してその後、メモや質問を投稿または回答します。
+最初にマップ検索で自分の書きたい、見たいお店を検索します。<br>
+その後、メモや質問を投稿または回答します。
 
 ### 目指した課題解決
 
-お店の口コミが書けるものとして googlemap があるが、自由度が高すぎることによって各々の知りたい情報を見つけるのに時間がかかったりなかったりする。
-その課題解決として、一定の情報分けをすることによって知りたい情報を見つけやすく、見つからなくても、質問投稿機能から自分の目的とする情報を直接投げかけることができるようにしている。
+お店の口コミが書けるものとして Google Map がありますが、自由度が高すぎることによって各々の知りたい情報を見つけるのに時間がかかったり情報自体なかったりします。<br>
+その課題解決として、一定の情報分けをすることによって知りたい情報を見つけやすく、見つからなくても質問投稿機能から自分の目的とする情報を直接投げかけることができるようにしています。
 
-## 使用言語・OS
+### アプリ URL
 
-os:mac
-HTML/ CSS / SASS / React.js / laravel / mySQL / AWS /API
+http://gurumemos.herokuapp.com/
 
-## 機能一覧
+### テストアカウント
 
-・ログイン機能
-・サインアップ機能
-・マップ検索機能
-・メモ投稿機能
-・星評価・写真アップロード機能
-・質問投稿機能
-・質問の回答投稿機能
+メールアドレス：kani@gmail.com <br>
+パスワード：kanikani
 
 ## 開発環境
 
-PHP 7.3.24
-Ruby Sass 3.7.4
-react 17.0.2
-npm 7.11.2
-node v16.1.0
+os:macOS<br>
+HTML<br>
+CSS<br>
+PHP v7.3.24<br>
+npm v7.11.2<br>
+node v16.1.0<br>
+Sass v1.32.11<br>
+React.js v17.0.2<br>
+Laravel v8.77.1<br>
+material-ui/core v4.12.3<br>
+MySQL<br>
+AWS<br>
+Google Maps API(Geocoding API, Maps JavaScript API, Places API)
 
-npm install --save @material-ui/core @material-ui/icons @material-ui/styles connected-react-router react-router
+## 機能一覧
+
+・ログイン機能<br>
+・サインアップ機能<br>
+・マップ検索機能<br>
+・メモ投稿機能<br>
+・星評価機能<br>
+・写真 S3 アップロード機能<br>
+・質問投稿機能<br>
+・質問の回答投稿機能
 
 ## ER 図
 
