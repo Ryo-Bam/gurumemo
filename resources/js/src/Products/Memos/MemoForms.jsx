@@ -3,11 +3,11 @@ import {LongTextInput, PrimaryButton} from "../../Uikit/index";
 import { StarRate, UploadImgs } from "../FormsUi/index";
 
 const MemoForms = (props) => {
-    const { data, inputChange, btnFunc, handleUploadImg, uploadImg } = props;
+    const { data, inputChange, btnFunc, name, handleUploadImg, uploadImg } = props;
     //メモの新規登録フォーム
     return (
         <div className="question_container">
-            <h1 className="home_text">投稿フォームです</h1>
+            <h1 className="home_text">『{name}』の投稿フォームです</h1>
             <form>
                 <div>
                 <LongTextInput
