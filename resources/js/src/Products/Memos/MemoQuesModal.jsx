@@ -15,13 +15,13 @@ const MemoQuesModal = ({ show, setShow, store_id, name, category }) => {
     const imgData = new FormData();
     const handleUploadImg = useCallback((e) => {
     if (!e.currentTarget.files || e.currentTarget.files.length === 0) return;
-    const fileReader = new FileReader();
+    // const fileReader = new FileReader();
     const file = e.currentTarget.files[0];
     if (file.type !== "image/jpeg" && file.type !== "image/png") return;
     imgData.append('image', file);
     for (let value of imgData.entries()) {
     }
-});
+    });
     //質問のテキストが入力がされたら（都度）入力値を変更する
     const inputQuesChange = useCallback((e) => {
         const key = e.target.name;
