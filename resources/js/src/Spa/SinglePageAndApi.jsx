@@ -159,7 +159,7 @@ const SinglePageAndApi = (props) => {
       </div>
       </div>
       <div>
-        <MemoData memos={memos} store_id={storeIds} category={category}/>
+        <MemoData memos={memos} store_id={storeIds} name={name} category={category}/>
         <QuestionData questions={propedQuestions} callback={categoryChange} category={category} />
       </div>
     </div>
