@@ -16,7 +16,7 @@ const styles = {
 
 //フォームの星評価
 const StarRate = (props) => {
-    const [ratingStar, setRatingStar] = useState(null);
+    const [ratingStar, setRatingStar] = useState(0);
     const [hoverValue, setHoverValue] = useState(null);
     
     return (
