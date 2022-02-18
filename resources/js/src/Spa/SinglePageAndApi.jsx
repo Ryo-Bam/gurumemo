@@ -64,18 +64,22 @@ const SinglePageAndApi = (props) => {
         setLat(results[0].geometry.location.lat());
         setLng(results[0].geometry.location.lng());
 
-
-        // const placesService = new google.maps.places.PlacesService(map);
-        // placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
-        //   if (status === "OK") {
-        //     //placeから情報を取得する処理
-        //     setName(place.name);
-        //     console.log(place);
-        //   }
-        // })
+        console.log(results[0].geometry.location.lat);
+        console.log(results[0]);
+        const placesService = new google.maps.places.PlacesService(map);
+        placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
+          if (status === "OK") {
+            //placeから情報を取得する処理
+            setName(place.name);
+            console.log(place);
+          }
+        })
       }
     });
   };
+  
+
+
 
   //カテゴリーのデータを取得
   const getCategory = async () => {
@@ -100,7 +104,7 @@ const SinglePageAndApi = (props) => {
       .post('/api/store', {
         lat: lat,
         lng: lng,
-        // name: name
+        name: name
       })
       .then((res) => {
           setStoreIds(res.data);
@@ -143,7 +147,7 @@ const SinglePageAndApi = (props) => {
   return (
     <div className="home_display">
       <div>
-      {/* <p className='home_name'>{name}</p> */}
+      <p className='home_name'>{name}</p>
       <div className="map_search">
         <input type="text" onChange={(e) => setAddress(e.target.value)} />
         <PrimaryButton onClick={search} label={"検索"}></PrimaryButton>

@@ -14,7 +14,7 @@ class Store extends Model
     protected $fillable = [
         'lat',
         'lng',
-        // 'name',
+        'name',
     ];
 
 
