@@ -104,7 +104,7 @@ const SinglePageAndApi = (props) => {
       .post('/api/store', {
         lat: lat,
         lng: lng,
-        name: name
+        // name: name
       })
       .then((res) => {
           setStoreIds(res.data);
