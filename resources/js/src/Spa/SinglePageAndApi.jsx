@@ -63,14 +63,16 @@ const SinglePageAndApi = (props) => {
         }));
         setLat(results[0].geometry.location.lat());
         setLng(results[0].geometry.location.lng());
-        const placesService = new google.maps.places.PlacesService(map);
-        placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
-          if (status === "OK") {
-            //placeから情報を取得する処理
-            setName(place.name);
-            console.log(place);
-          }
-        })
+
+
+        // const placesService = new google.maps.places.PlacesService(map);
+        // placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
+        //   if (status === "OK") {
+        //     //placeから情報を取得する処理
+        //     setName(place.name);
+        //     console.log(place);
+        //   }
+        // })
       }
     });
   };
@@ -98,7 +100,7 @@ const SinglePageAndApi = (props) => {
       .post('/api/store', {
         lat: lat,
         lng: lng,
-        name: name
+        // name: name
       })
       .then((res) => {
           setStoreIds(res.data);
@@ -116,10 +118,10 @@ const SinglePageAndApi = (props) => {
 
   useEffect(() => {
     //バリデーション
-    if (lat !== 35.6585769 && lng !== 139.7454506 && name !== '') {
+    if (lat !== 35.6585769 && lng !== 139.7454506 ) {
       createMaps();
     }
-  }, [name])
+  }, [lng])
 
 
   const setLatLng = ({lat, lng}) => {
@@ -141,7 +143,7 @@ const SinglePageAndApi = (props) => {
   return (
     <div className="home_display">
       <div>
-      <p className='home_name'>{name}</p>
+      {/* <p className='home_name'>{name}</p> */}
       <div className="map_search">
         <input type="text" onChange={(e) => setAddress(e.target.value)} />
         <PrimaryButton onClick={search} label={"検索"}></PrimaryButton>
@@ -157,7 +159,7 @@ const SinglePageAndApi = (props) => {
       </div>
       </div>
       <div>
-        <MemoData memos={memos} store_id={storeIds} name={name} category={category}/>
+        <MemoData memos={memos} store_id={storeIds} category={category}/>
         <QuestionData questions={propedQuestions} callback={categoryChange} category={category} />
       </div>
     </div>

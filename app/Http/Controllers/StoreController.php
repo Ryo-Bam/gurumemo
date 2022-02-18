@@ -28,8 +28,8 @@ class StoreController extends Controller
         // $memo_id = Store::find(1)->id;
         // $store = new Store;
         $store = Store::firstOrCreate(
-            ['name' => $request->name],
-            ['lat' => $request->lat, 'lng' => $request->lng]
+            ['lat' => $request->lat],
+            ['lng' => $request->lng]
             // ['lng' => $request->lng],
     );
         $store->save();
