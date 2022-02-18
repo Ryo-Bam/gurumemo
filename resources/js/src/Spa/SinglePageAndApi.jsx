@@ -100,7 +100,7 @@ const SinglePageAndApi = (props) => {
       .post('/api/store', {
         lat: lat,
         lng: lng,
-        // name: name
+        name: name
       })
       .then((res) => {
           setStoreIds(res.data);
@@ -118,10 +118,10 @@ const SinglePageAndApi = (props) => {
 
   useEffect(() => {
     //バリデーション
-    if (lat !== 35.6585769 && lng !== 139.7454506 ) {
+    if (lat !== 35.6585769 && lng !== 139.7454506 && name !== '') {
       createMaps();
     }
-  }, [lng])
+  }, [name])
 
 
   const setLatLng = ({lat, lng}) => {
