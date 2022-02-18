@@ -69,6 +69,7 @@ const MemoQuesModal = ({ show, setShow, store_id, name, category }) => {
 
     //メモの情報をデータベースに送信
     const createMemo = async (e) => {
+        e.preventDefault();
         if (formData == '') {
             return;
         }
