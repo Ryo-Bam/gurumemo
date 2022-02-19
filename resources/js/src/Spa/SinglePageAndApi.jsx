@@ -93,7 +93,6 @@ const SinglePageAndApi = (props) => {
     const quesData = await axios.get(`api/store/ques/${storesId}`)
     setQuestions(quesData.data.questions);
   }
-
   //マップのデータをデータベースに送信
   const createMaps = async (e) => {
     await axios
