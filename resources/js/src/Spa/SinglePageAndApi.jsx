@@ -63,13 +63,13 @@ const SinglePageAndApi = (props) => {
         }));
         setLat(results[0].geometry.location.lat());
         setLng(results[0].geometry.location.lng());
-        // const placesService = new google.maps.places.PlacesService(map);
-        // placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
-        //   if (status === "OK") {
-        //     //placeから情報を取得する処理
-        //     setName(place.name);
-        //   }
-        // })
+        const placesService = new google.maps.places.PlacesService(map);
+        placesService.getDetails({ placeId: results[0].place_id }, (place, status) => {
+          if (status === "OK") {
+            //placeから情報を取得する処理
+            setName(place.name);
+          }
+        })
       }
     });
   };
