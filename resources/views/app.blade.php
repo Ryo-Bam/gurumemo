@@ -18,6 +18,8 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB31b-oK-BfbhXDcnqUlTLF1RmYF8ClBQY&libraries=places"
+        async></script>
         @inertia
 
         @env ('local')
